@@ -1,0 +1,89 @@
+:root {
+  --bg-dark: #0f172a;
+  --bg-light: #1e293b;
+  --electric: #38bdf8;
+  --primary: #1e3a8a;
+  --text: #e2e8f0;
+}
+
+/* Fondo fijo */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse at center, #112240 0%, #0f172a 100%);
+  overflow: hidden;
+}
+
+/* Tarjeta con fondo oscuro y borde animado */
+.welcome .card {
+  width: min(600px, 90vw);
+  padding: 32px;
+  border-radius: 16px;
+  background: #0f172a; /* fondo fijo */
+  backdrop-filter: blur(8px);
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px var(--electric);
+  animation: pop 600ms ease-out;
+  border: 3px solid transparent;
+  border-image: linear-gradient(135deg, var(--electric), var(--primary)) 1;
+  border-image-slice: 1;
+}
+
+/* Texto con gradiente animado */
+#saludo {
+  font-size: clamp(28px, 6vw, 48px);
+  background: linear-gradient(90deg, var(--electric), var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 2.5s ease-in-out infinite;
+}
+
+.sub {
+  margin-top: 8px;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+/* Loader eléctrico con sombra animada */
+.loader {
+  margin: 24px auto 0;
+  width: 72px; height: 72px;
+  border: 6px solid rgba(56,189,248,0.15);
+  border-top-color: var(--electric);
+  border-radius: 50%;
+  animation: spin 1s linear infinite, loaderGlow 2s ease-in-out infinite;
+}
+
+/* Animaciones */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@keyframes pop {
+  from { transform: scale(.96); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shine {
+  0%,100% { filter: drop-shadow(0 0 0px var(--electric)); }
+  50%     { filter: drop-shadow(0 0 12px var(--electric)); }
+}
+
+@keyframes loaderGlow {
+  0%,100% { box-shadow: 0 0 0px var(--electric); }
+  50%     { box-shadow: 0 0 15px var(--electric); }
+}
+
+/* Efecto de salida tipo diapositiva */
+.fade-out {
+  animation: slideFade 1.2s ease-in-out forwards;
+}
+
+@keyframes slideFade {
+  0% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.5; transform: translateY(-20px); }
+  100% { opacity: 0; transform: translateY(100px); }
+}

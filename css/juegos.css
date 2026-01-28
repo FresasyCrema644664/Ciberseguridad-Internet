@@ -1,0 +1,39 @@
+.quiz, .memoria, .password-checker, .simulador {
+  margin: 20px 0; 
+  padding: 20px;
+  background: var(--panel);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.quiz button, .password-checker button, .simulador button {
+  margin: 5px; 
+  padding: 8px 12px;
+  background: var(--accent); 
+  color: #fff;
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer;
+}
+.quiz button:hover, .password-checker button:hover, .simulador button:hover {
+  filter: brightness(1.1);
+}
+
+.grid {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.card {
+  background: var(--primary);
+  color: transparent;
+  padding: 20px; 
+  text-align: center;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.card.volteada {
+  background: var(--accent);
+  color: #fff; 
+}
