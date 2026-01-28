@@ -10,7 +10,7 @@
   margin: 5px; 
   padding: 8px 12px;
   background: var(--accent); 
-  color: #fff;
+  color: #0a0732;
   border: none; 
   border-radius: 8px; 
   cursor: pointer;
@@ -35,5 +35,138 @@
 }
 .card.volteada {
   background: var(--accent);
-  color: #fff; 
+  color: #1c0303; 
+}
+
+/* ===============================
+   INTERACTIVOS / JUEGOS / SIMULADORES
+   ACOPLADOS AL ESTILO DEL SITIO
+================================ */
+
+/* Contenedores generales */
+.quiz,
+.memoria,
+.password-checker,
+.simulador {
+  margin: 40px auto;
+  padding: 28px;
+  max-width: 900px;
+  background: #111827; /* igual que recurso-card */
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(56,189,248,0.25);
+  color: #e2e8f0;
+  text-align: center;
+}
+
+/* Títulos dentro */
+.quiz h3,
+.memoria h3,
+.password-checker h3,
+.simulador h3 {
+  color: #38bdf8;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+/* Texto */
+.quiz p,
+.password-checker p,
+.simulador p {
+  opacity: 0.85;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   BOTONES
+================================ */
+
+.quiz button,
+.password-checker button,
+.simulador button {
+  margin: 6px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #2563eb, #10b981);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quiz button:hover,
+.password-checker button:hover,
+.simulador button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(56,189,248,0.6);
+}
+
+/* ===============================
+   INPUTS (password checker)
+================================ */
+
+.password-checker input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px;
+  margin: 14px auto;
+  border-radius: 10px;
+  border: 1px solid rgba(56,189,248,0.3);
+  background: #0f172a;
+  color: #e2e8f0;
+  outline: none;
+}
+
+.password-checker input::placeholder {
+  color: #94a3b8;
+}
+
+/* ===============================
+   JUEGO DE MEMORIA
+================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* Cartas */
+.card {
+  background: #1e293b;
+  color: transparent;
+  padding: 24px;
+  text-align: center;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(56,189,248,0.25);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Carta volteada */
+.card.volteada {
+  background: linear-gradient(135deg, #38bdf8, #9333ea);
+  color: #020617;
+}
+
+/* ===============================
+   FEEDBACK / RESULTADOS
+================================ */
+
+.resultado {
+  margin-top: 16px;
+  font-weight: 600;
+  color: #10b981;
+}
+
+.error {
+  color: #ef4444;
 }

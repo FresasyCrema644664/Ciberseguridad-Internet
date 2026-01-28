@@ -1,6 +1,6 @@
 :root {
   --bg: #f9fafb;
-  --text: #374151;
+  --text: #ffffff;
   --primary: #2563eb;
   --accent: #10b981;
   --panel: #ffffff;
@@ -577,4 +577,380 @@ body {
   .parallax h2 {
     font-size: 2.2rem;
   }
+}
+
+
+/* ===============================
+   INTRODUCCIÓN AMENAZAS
+================================ */
+
+.intro-amenazas {
+  width: 100%;
+  padding: 6rem 1.5rem;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: auto;
+  animation: fadeUp 1s ease-out;
+}
+
+.intro-amenazas h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  position: relative;
+}
+
+.intro-amenazas h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #38bdf8;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.intro-amenazas p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cbd5f5;
+}
+
+/* ANIMACIÓN SUAVE */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .intro-amenazas h2 {
+    font-size: 2rem;
+  }
+
+  .intro-amenazas p {
+    font-size: 1rem;
+  }
+}
+
+
+/*PAGINA 3 MEDIDAS DE SEGURIDAD*/
+.parallax.contrasenas { background-image: url("../images/contraseñas seguras.jpeg"); }
+.parallax.movil       { background-image: url("../images/seguridad en el movil.jpeg"); }
+.parallax.laptop      { background-image: url("../images/laptop.jpeg"); }
+.parallax.descargas   { background-image: url("../images/futuristic cybersecu.png"); }
+.parallax.permisos    { background-image: url("../images/medidas\ de\ seguridad.jpeg"); }
+
+
+
+/*RECURSOS XD*/
+.tips {
+  padding: 4rem 8%;
+  background-color: #0f172a;
+  color: #fff;
+  text-align: center;
+}
+
+.tips h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tip-card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-8px);
+}
+
+.tip-img {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.tip-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tip-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.tip-card p {
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+/*FIN DE RECURSOSSS*/
+
+
+/*GALERIAAAA*/
+.galeria-corner {
+  padding: 5rem 0;
+  background: #0b1220;
+  text-align: center;
+}
+
+.corner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 4rem auto 0;
+  padding: 0 2rem;
+}
+
+.corner-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.corner-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* esquinas */
+.corner-card::before,
+.corner-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #38bdf8;
+  top: 0;
+  left: 0;
+  transition: transform 0.35s ease;
+  pointer-events: none;
+}
+
+.corner-card::after {
+  border-color: #9333ea;
+}
+
+/* hover */
+.corner-card:hover::before {
+  transform: translate(-14px, -14px);
+}
+
+.corner-card:hover::after {
+  transform: translate(14px, 14px);
+}
+
+.corner-card:hover {
+  transform: scale(1.03);
+}
+
+.corner-card:nth-child(4) img {
+  object-position: center center;
+}
+
+.corner-desc {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  opacity: 0.85;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Contenedor general de la galería */
+.gallery {
+  max-width: 900px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* espacio entre imágenes */
+  align-items: center;
+}
+
+/* Tarjeta individual */
+.corner-card {
+  width: 100%;
+  max-width: 520px; /* 👈 tamaño equilibrado */
+  text-align: center;
+}
+
+/* Imagen */
+.corner-card img {
+  width: 100%;
+  height: 320px; /* 👈 ni gigante ni chiquita */
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+/* Descripción */
+.corner-desc {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* ===============================
+   INTRODUCCIÓN AMENAZAS – BLOQUES
+   =============================== */
+
+.intro-amenazas-bloques {
+  max-width: 1100px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 20px;
+}
+
+.intro-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+/* Invertir orden (gif a la izquierda) */
+.intro-bloque.reverse {
+  flex-direction: row-reverse;
+}
+
+.intro-texto {
+  flex: 1;
+  color: #e2e8f0;
+}
+
+.intro-texto p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Contenedor del GIF */
+.intro-media {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-media img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-bloque,
+  .intro-bloque.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-media {
+    margin-top: 20px;
+  }
+}
+
+
+
+/* ===============================
+   SECCIONES DE RECURSOS
+================================ */
+
+.recursos-seccion {
+  padding: 5rem 8%;
+  background-color: #0f172a;
+  text-align: center;
+}
+
+.recursos-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.recurso-card {
+  background: #111827;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(56,189,248,0.25);
+  transition: transform 0.3s ease;
+}
+
+.recurso-card:hover {
+  transform: translateY(-10px);
+}
+
+.recurso-img {
+  width: 100%;
+  height: 160px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.recurso-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+
+.recurso-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: #38bdf8;
+}
+
+.recurso-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
 }
